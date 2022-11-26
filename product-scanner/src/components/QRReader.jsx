@@ -16,7 +16,7 @@ function QRReader() {
       .catch(e => console.log(e));
     }
     return (
-      <Container>
+      <Container style={{marginTop:'50px'}}>
         <Typography variant='h3' align='center'>Scan your code</Typography>
 
         <Grid container style={{alignItems:"center", justifyContent:"center", marginTop:"100px"}}>

@@ -11,7 +11,7 @@ import { Outlet, Link } from "react-router-dom";
 export default function Navbar() {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" style={{marginBottom:'50px'}}>
+      <AppBar position="static" style={{backgroundColor:'#e1f5fe', color:'#333'}}>
         <Toolbar>
           <IconButton
             size="large"
@@ -23,15 +23,14 @@ export default function Navbar() {
             <MenuIcon />
           </IconButton>
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            <Link to="/" style={{color:'white', textDecoration:'none'}}>
+            <Link to="/home" style={{color:'#333', textDecoration:'none'}}>
                 Product Scanner
             </Link>
             </Typography>
-          
-          <Link to="/generate" style={{color:'white', textDecoration:'none'}}><Button color="inherit">Generate</Button></Link>
-          <Link to="/scan" style={{color:'white', textDecoration:'none'}}><Button color="inherit">Scan</Button></Link>
+            <Link to="/home" style={{color:'#333', textDecoration:'none'}}><Button color="inherit">Home</Button></Link>
+          <Link to="/generate" style={{color:'#333', textDecoration:'none'}}><Button color="inherit">Generate</Button></Link>
+          <Link to="/scan" style={{color:'#333', textDecoration:'none'}}><Button color="inherit">Scan</Button></Link>
           <Button color="inherit">Login</Button>
-          <Button color="inherit">Signup</Button>
         </Toolbar>
       </AppBar>
       <Outlet />

@@ -31,7 +31,7 @@ function QRScanner() {
   
   
     return (
-      <Container>
+      <Container style={{marginTop:'50px'}}>
         <Typography variant='h3' align='center'> Add Product & Generate QR Code</Typography>
 
         <Grid container style={{alignItems:"center", justifyContent:"center", marginTop:"100px"}}>
