@@ -1,7 +1,7 @@
 import {useState} from 'react'
 import QRCode from 'react-qr-code'
 import React from 'react';
-import { Grid, TextField, Button, Typography } from '@mui/material'
+import { Grid, TextField, Button, Typography, Container } from '@mui/material'
 
 function QRScanner() {
 
@@ -31,17 +31,17 @@ function QRScanner() {
   
   
     return (
-      <div className="App">
+      <Container>
         <Typography variant='h3' align='center'> Add Product & Generate QR Code</Typography>
 
-        <Grid container style={{alignItems:"center", justifyContent:"center", marginTop:"40px"}}>
-          <Grid xs={12} md={6} >
+        <Grid container style={{alignItems:"center", justifyContent:"center", marginTop:"100px"}}>
+          <Grid xs={12} md={8} >
             <div>
               <TextField id="standard-basic" label="Hash Code" variant="standard" fullWidth onChange={(e) => {
               setInputValue(e.target.value)}}/>
             </div>
           </Grid>
-          <Grid xs={12} md={6}>
+          <Grid xs={12} md={4}>
             <div style={{ height: "auto", margin: "0 auto", maxWidth: 120, width: "100%", 
                           border: "3px solid black", padding: "10px", borderRadius: "5px"
             }}>
@@ -56,7 +56,7 @@ function QRScanner() {
             </div>
           </Grid>
         </Grid>    
-      </div>
+      </Container>
     );
   }
   

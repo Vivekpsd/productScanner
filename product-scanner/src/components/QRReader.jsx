@@ -1,8 +1,7 @@
 import {useState} from 'react'
 import QrScanner from 'qr-scanner';
 import React from 'react';
-import { Grid ,Typography, Button, IconButton } from '@mui/material'
-import { PhotoCamera } from '@mui/icons-material'
+import { Grid ,Typography, Button, Container} from '@mui/material'
 
 function QRReader() {
     const [result, setResult] = useState("");
@@ -16,23 +15,26 @@ function QRReader() {
       .then(result => setResult(result.data))
       .catch(e => console.log(e));
     }
-  
     return (
-      <div className="App">
+      <Container>
         <Typography variant='h3' align='center'>Scan your code</Typography>
 
-        <Grid container style={{alignItems:"center", justifyContent:"center", marginTop:"40px"}}>
-          <Grid xs={6}>
+        <Grid container style={{alignItems:"center", justifyContent:"center", marginTop:"100px"}}>
+          <Grid xs={4}>
             <Button variant="contained" component="label">
               Upload
               <input hidden accept="image/*" multiple type="file" onChange={(e) => { readCode(e)}} />
             </Button>
+            &nbsp;&nbsp;
+            <Button variant="contained" component="label" color="success">
+              Verify
+            </Button>
           </Grid>
-          <Grid xs={6}>
+          <Grid xs={8}>
             <Typography variant='h6' align='center'><b>Code: </b> {result}</Typography>
           </Grid>
         </Grid>      
-      </div>
+      </Container>
     );
   }
   export default QRReader;

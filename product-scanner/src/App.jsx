@@ -1,14 +1,22 @@
-import {Container } from '@mui/material'
 import QRGenerator from './components/QRGenerator'
 import QRReader from './components/QRReader';
+import Navbar from './components/Navbar'
+import InvalidPage from './components/InvalidPage';
+import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import './index.css';
 
 function App() {
   return (
       <>
-       <Container maxWidth="md">
-        <QRGenerator />
-        <QRReader />
-       </Container>
+       <Router>
+        <Routes>
+        <Route path="/" element={<Navbar />}>
+          <Route path="/scan" element={<QRReader />} />
+          <Route path="/generate" element={<QRGenerator />} />
+          <Route path="*" element={<InvalidPage />} />
+        </Route>
+        </Routes>
+      </Router>
       </>
   );
 }
