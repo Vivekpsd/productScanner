@@ -30,7 +30,7 @@ export default function Navbar() {
             <Link to="/home" style={{color:'#333', textDecoration:'none'}}><Button color="inherit">Home</Button></Link>
           <Link to="/generate" style={{color:'#333', textDecoration:'none'}}><Button color="inherit">Generate</Button></Link>
           <Link to="/scan" style={{color:'#333', textDecoration:'none'}}><Button color="inherit">Scan</Button></Link>
-          <Button color="inherit">Login</Button>
+          <Link to="/login" style={{color:'#333', textDecoration:'none'}}><Button color="inherit">Login</Button></Link>
         </Toolbar>
       </AppBar>
       <Outlet />
