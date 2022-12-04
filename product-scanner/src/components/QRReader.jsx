@@ -15,6 +15,17 @@ function QRReader() {
       .then(result => setResult(result.data))
       .catch(e => console.log(e));
     }
+
+    // Temporary product verification
+    const verifyKey = () => {
+      const key = localStorage.getItem('key');
+
+      if (result === key) {
+        alert("Product Verified");
+      } else {
+        alert("Product Not Verified");
+      }
+    }
     return (
       <Container style={{marginTop:'50px'}}>
         <Typography variant='h3' align='center'>Scan your code</Typography>
@@ -26,12 +37,12 @@ function QRReader() {
               <input hidden accept="image/*" multiple type="file" onChange={(e) => { readCode(e)}} />
             </Button>
             &nbsp;&nbsp;
-            <Button variant="contained" component="label" color="success">
+            <Button variant="contained" component="label" color="success" onClick={verifyKey}>
               Verify
             </Button>
           </Grid>
           <Grid xs={8}>
-            <Typography variant='h6' align='center'><b>Code: </b> {result}</Typography>
+            <Typography variant='h6' align='center'><b>Code: </b> {result.substring(0, 5) + 'XXXXXX.....'}</Typography>
           </Grid>
         </Grid>      
       </Container>

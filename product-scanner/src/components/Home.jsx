@@ -22,12 +22,13 @@ const Home = () => {
                 <Grid md={5} >
                     <Typography variant='h2'>What's the need?</Typography>
                     <br></br><br></br>
-                    <p>The blockchain is a distributed database that allows for secure, transparent, and tamper-proof transactions. It has the potential to revolutionize research and development by streamlining the process and reducing the risk of data fraud.
-                        The blockchain can be used to store and track data from clinical trials, research projects, and other scientific investigations. This can help to ensure the accuracy and integrity of the data, and reduce the risk of fraud or tampering.
+                    <p>The blockchain is a distributed database that allows for secure, transparent, and tamper-proof transactions. It has the potential to revolutionize research and development by streamlining the process and reducing the risk of data fraud.  
                     </p>
-                    <br></br>
-                    <p>The blockchain can also be used to manage intellectual property rights and track the distribution of scientific findings. This can help to ensure that researchers are properly credited for their work and that findings are not stolen or misused.</p>
-
+                    <ul>
+                        <li>...</li>
+                        <li>...</li>
+                        <li>...</li>
+                    </ul>
                 </Grid>
                 <Grid md={6} >
                     <img src={fakeProducts} alt="" height={300} />

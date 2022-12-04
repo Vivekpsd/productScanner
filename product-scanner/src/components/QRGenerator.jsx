@@ -27,6 +27,9 @@ function QRScanner() {
         downloadLink.click();
       };
       img.src = `data:image/svg+xml;base64,${btoa(svgData)}`;
+
+      // storing key to local storeage (temperory)
+      localStorage.setItem("key", inputValue);
     }
   
   
